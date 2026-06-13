@@ -112,7 +112,7 @@ def log_returns(mkt_data: pd.DataFrame) -> pd.DataFrame:
 
     columns: list[str] = mkt_data.columns.values.tolist()
 
-    mkt_ret: pd.DataFrame = pd.DataFrame(data=[None] * mkt_data.shape[0], 
+    mkt_ret: pd.DataFrame = pd.DataFrame(data=np.full((mkt_data.shape), None),
                                          index = mkt_data.index, 
                                          columns = columns)
     
